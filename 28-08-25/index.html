@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Exercício Rotas</title>
+    <style>
+        body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background-color: #f4f4f9;color: #333;line-height: 1.6;margin: 0;padding: 20px;}
+        .container {max-width: 800px;margin: 0 auto;background-color: #fff;padding: 30px;border-radius: 8px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+        h1, h2 {color: #0056b3;border-bottom: 2px solid #e0e0e0;padding-bottom: 10px;margin-top: 0;}
+        h2 {font-size: 1.5em;border: none;margin-top: 25px;}
+        hr {border: 0;height: 1px;background-color: #e0e0e0;margin: 25px 0;}
+        form {background-color: #f9f9f9;padding: 20px;border: 1px solid #e0e0e0;border-radius: 8px;margin-bottom: 20px;}
+        label {display: block;margin-bottom: 5px;font-weight: 600;color: #555;}
+        input[type="number"],
+        select {width: 100%;padding: 10px;margin-bottom: 15px;border: 1px solid #ccc;border-radius: 4px;box-sizing: border-box;}
+        button[type="submit"] {background-color: #007bff;color: #fff;padding: 10px 15px;border: none;border-radius: 4px;cursor: pointer;font-size: 1em;transition: background-color 0.3s ease;}
+        button[type="submit"]:hover {background-color: #0056b3;}
+        a {color: #007bff;text-decoration: none;}
+        a:hover {text-decoration: underline;}
+        ul {list-style: none;padding: 0;}
+        ul li {margin-bottom: 10px;}
+    </style>
+</head>
+<body>
+    <h1>Exercício de Rotas com Node.js</h1>
+
+    <p>Para testar as rotas GET, acesse os links abaixo:</p>
+    <ul>
+        <li><a href="/saudacao?nome=Joao">/saudacao?nome=Joao</a></li>
+        <li><a href="/dobro?numero=5">/dobro?numero=5</a></li>
+    </ul>
+    
+    <hr>
+
+    <h2>Conversor de Moedas (POST /formulario)</h2>
+    <form action="/formulario" method="post">
+        <label for="valor">Valor:</label>
+        <input type="number" id="valor" name="valor" required>
+
+        <label for="moeda">Moeda:</label>
+        <select id="moeda" name="moeda" required>
+            <option value="USD">Dólar (USD)</option>
+            <option value="EUR">Euro (EUR)</option>
+        </select>
+        
+        <button type="submit">Converter</button>
+    </form>
+
+    <hr>
+    
+    <h2>Calculadora de Soma (POST /soma)</h2>
+    <form action="/soma" method="post">
+        <label for="a">A:</label>
+        <input type="number" id="a" name="a" required>
+
+        <label for="b">B:</label>
+        <input type="number" id="b" name="b" required>
+        
+        <button type="submit">Somar</button>
+    </form>
+</body>
+</html>
