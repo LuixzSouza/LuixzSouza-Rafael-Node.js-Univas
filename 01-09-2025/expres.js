@@ -1,0 +1,2 @@
+/*refaca a ativadade ativadade em saka miduki http usando agora o express e middleawares para tratar a entrada de parametros 
+*/
